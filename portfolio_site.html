@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanjeem Azwad Zaman - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            background: #e8e8e8;
+            padding: 15px 30px;
+            border-bottom: 1px solid #d0d0d0;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #0066cc;
+        }
+
+        .header-section {
+            padding: 50px 40px;
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .profile-left {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 15px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .email-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px;
+            background: #f8f8f8;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .email-icon {
+            width: 20px;
+            height: 20px;
+            background: #0066cc;
+            border-radius: 3px;
+        }
+
+        .email-box span {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .research-interests {
+            flex: 0 0 280px;
+            text-align: center;
+        }
+
+        .venn-diagram {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 15px;
+            position: relative;
+        }
+
+        .circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            position: absolute;
+            opacity: 0.6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .circle1 {
+            background: #90EE90;
+            left: 10px;
+            top: 20px;
+        }
+
+        .circle2 {
+            background: #87CEEB;
+            right: 10px;
+            top: 20px;
+        }
+
+        .circle3 {
+            background: #9370DB;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 10px;
+        }
+
+        .research-title {
+            font-size: 13px;
+            font-style: italic;
+            color: #333;
+        }
+
+        .content-section {
+            padding: 20px 40px 40px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .about-text {
+            color: #444;
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .about-text a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .about-text a:hover {
+            text-decoration: underline;
+        }
+
+        .resume-section {
+            padding: 40px;
+        }
+
+        .resume-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .download-btn {
+            width: 30px;
+            height: 30px;
+            border: 2px solid #333;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .download-btn:hover {
+            background: #333;
+            color: white;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 10px;
+            bottom: 10px;
+            width: 2px;
+            background: #d0d0d0;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -32px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #666;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px #666;
+        }
+
+        .job-title {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .company {
+            font-style: italic;
+            color: #555;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .date {
+            color: #888;
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .course-list {
+            list-style: none;
+            font-size: 13px;
+            color: #555;
+        }
+
+        .course-list li {
+            margin-bottom: 5px;
+        }
+
+        .course-list a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .course-list a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .header-section {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            .content-section, .resume-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="#resume">Resume</a>
+            <a href="#projects">Projects</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#leadership">Leadership</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-section">
+            <div class="profile-left">
+                <img src="profile.jpg" alt="Tanjeem Azwad Zaman" class="profile-img">
+                <h1>Tanjeem Azwad Zaman <span style="color: #888;">♂</span></h1>
+                <p class="subtitle">Ph.D. Student<br>Carnegie Mellon University, SCS</p>
+                <div class="email-box">
+                    <div class="email-icon"></div>
+                    <span>EMAIL<br>zaman.tanjeemazwad@gmail.com</span>
+                </div>
+            </div>
+
+            <div class="research-interests">
+                <div class="venn-diagram">
+                    <div class="circle circle1">Bioinformatics</div>
+                    <div class="circle circle2">Algorithms</div>
+                    <div class="circle circle3">Machine Learning</div>
+                </div>
+                <p class="research-title">My Research Interests</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>About Me</h2>
+            <p class="about-text">
+                I'm Tanjeem, a Ph.D. student (Fall'25) in the Joint CMU-Pitt Ph.D Program in Computational Biology, under Carnegie Mellon University's School of Computer Science. I completed my undergraduate from the <a href="#">Department of Computer Science & Engineering at Bangladesh University of Engineering and Technology (BUET)</a>. My research interests lie in Bioinformatics, Algorithms and Machine Learning.
+            </p>
+            <p class="about-text">
+                Outside of my academic pursuits, I am an avid fan of my favorite soccer club — which would explain my fascination with Olympiakos during middle and high school. In my free time, I enjoy playing soccer, watching anime, or covering OSTs on the violin.
+            </p>
+        </div>
+
+        <div class="resume-section" id="resume">
+            <div class="resume-header">
+                <h2>My Resume</h2>
+                <div class="download-btn">↓</div>
+            </div>
+
+            <h3 style="margin-bottom: 20px; font-size: 18px;">Work Experience</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="job-title">Lecturer</div>
+                    <div class="company">Department of Computer Science and Engineering,<br>BRAC University</div>
+                    <div class="date">January 2025 — July 2025</div>
+                    <ul class="course-list">
+                        <li>[CSE331] Automata and Computability (Theory)</li>
+                        <li>[CSE423] Computer Graphics (Theory + Lab)</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="job-title">Adjunct Lecturer</div>
+                    <div class="company">Department of Computer Science and Engineering,<br>Bangladesh University of Engineering and Technology</div>
+                    <div class="date">August 2024 — December 2024</div>
+                    <ul class="course-list">
+                        <li>[CSE211] <a href="#">Theory of Computation (Theory)</a></li>
+                        <li>[CSE328] Information Systems Design and Management (Lab)</li>
+                        <li>[CSE410] Computer Graphics (Lab)</li>
+                        <li>[CSE216] Computer Networks (Lab)</li>
+                        <li>[CSE260] Technical Writing and Presentation (Lab)</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="job-title">Machine Learning Intern</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
