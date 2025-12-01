@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tanjeem Azwad Zaman - Portfolio</title>
+    <title>Saidul Islam - Personal Website</title>
     <style>
         * {
             margin: 0;
@@ -27,147 +27,219 @@
         }
 
         nav {
-            background: #e8e8e8;
-            padding: 15px 30px;
-            border-bottom: 1px solid #d0d0d0;
+            background: white;
+            padding: 20px 30px;
+            border-bottom: 1px solid #e0e0e0;
             display: flex;
-            justify-content: center;
-            gap: 30px;
+            justify-content: flex-end;
+            gap: 5px;
             flex-wrap: wrap;
         }
 
         nav a {
-            color: #333;
+            color: #555;
             text-decoration: none;
             font-size: 14px;
-            transition: color 0.3s;
+            transition: all 0.3s;
+            font-weight: 500;
+            padding: 8px 20px;
+            border-radius: 20px;
+            background: #f5f5f5;
         }
 
         nav a:hover {
-            color: #0066cc;
+            background: #e0e0e0;
+            color: #333;
         }
 
         .header-section {
-            padding: 50px 40px;
+            padding: 60px 60px 40px;
             display: flex;
-            gap: 40px;
+            gap: 60px;
             align-items: flex-start;
             flex-wrap: wrap;
         }
 
         .profile-left {
             flex: 1;
-            min-width: 280px;
+            min-width: 300px;
         }
 
         .profile-img {
-            width: 200px;
-            height: 200px;
-            border-radius: 15px;
+            width: 220px;
+            height: 280px;
+            border-radius: 20px;
             object-fit: cover;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
 
         h1 {
-            font-size: 32px;
-            margin-bottom: 5px;
+            font-size: 36px;
+            margin-bottom: 8px;
             font-weight: 600;
+            color: #2d3748;
+        }
+
+        .gender-symbol {
+            color: #888;
+            font-size: 24px;
+            margin-left: 8px;
         }
 
         .subtitle {
-            color: #666;
+            color: #0066cc;
             font-size: 14px;
-            margin-bottom: 20px;
+            margin-bottom: 5px;
+            line-height: 1.5;
+            font-weight: 500;
         }
 
-        .email-box {
+        .university {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .email-section {
             display: flex;
             align-items: center;
             gap: 10px;
-            padding: 10px;
-            background: #f8f8f8;
-            border-radius: 5px;
-            margin-bottom: 20px;
+            margin-top: 20px;
+            background: #f8f9fa;
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
         }
 
         .email-icon {
-            width: 20px;
-            height: 20px;
+            width: 24px;
+            height: 24px;
             background: #0066cc;
-            border-radius: 3px;
+            border-radius: 4px;
+            flex-shrink: 0;
         }
 
-        .email-box span {
+        .email-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .email-label {
+            font-size: 10px;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+        }
+
+        .email-link {
+            color: #0066cc;
+            text-decoration: none;
             font-size: 13px;
-            color: #666;
+        }
+
+        .email-link:hover {
+            text-decoration: underline;
         }
 
         .research-interests {
-            flex: 0 0 280px;
+            flex: 0 0 300px;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .venn-diagram {
-            width: 200px;
-            height: 200px;
-            margin: 0 auto 15px;
+            width: 260px;
+            height: 260px;
+            margin: 0 auto 20px;
             position: relative;
         }
 
         .circle {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             position: absolute;
-            opacity: 0.6;
+            opacity: 0.45;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 11px;
-            font-weight: 500;
+            font-size: 13px;
+            font-weight: 600;
+            color: #2d3748;
         }
 
         .circle1 {
             background: #90EE90;
-            left: 10px;
-            top: 20px;
+            left: 5px;
+            top: 5px;
         }
 
         .circle2 {
             background: #87CEEB;
-            right: 10px;
-            top: 20px;
+            right: 5px;
+            top: 5px;
         }
 
         .circle3 {
-            background: #9370DB;
+            background: #DDA0DD;
             left: 50%;
             transform: translateX(-50%);
-            bottom: 10px;
+            bottom: 5px;
         }
 
         .research-title {
-            font-size: 13px;
+            font-size: 14px;
             font-style: italic;
-            color: #333;
+            color: #555;
+            font-weight: 500;
         }
 
         .content-section {
-            padding: 20px 40px 40px;
+            padding: 50px 60px;
             border-top: 1px solid #e0e0e0;
         }
 
         h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
+            font-size: 28px;
+            margin-bottom: 30px;
             font-weight: 600;
+            color: #2d3748;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #2d3748;
+            display: inline-block;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            margin-top: 45px;
+            font-weight: 600;
+            color: #2d3748;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h3::before {
+            content: '📋';
+            font-size: 20px;
         }
 
         .about-text {
-            color: #444;
-            font-size: 14px;
-            line-height: 1.8;
-            margin-bottom: 15px;
+            color: #4a5568;
+            font-size: 15px;
+            line-height: 1.9;
+            margin-bottom: 18px;
         }
 
         .about-text a {
@@ -179,47 +251,49 @@
             text-decoration: underline;
         }
 
-        .resume-section {
-            padding: 40px;
-        }
-
-        .resume-header {
+        .section-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 30px;
+            margin-bottom: 35px;
         }
 
         .download-btn {
-            width: 30px;
-            height: 30px;
-            border: 2px solid #333;
-            border-radius: 5px;
+            width: 40px;
+            height: 40px;
+            border: 2px solid #2d3748;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             transition: all 0.3s;
+            font-size: 20px;
+            text-decoration: none;
+            color: #2d3748;
+            background: white;
         }
 
         .download-btn:hover {
-            background: #333;
+            background: #2d3748;
             color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
         .timeline {
             position: relative;
-            padding-left: 40px;
+            padding-left: 45px;
         }
 
         .timeline::before {
             content: '';
             position: absolute;
-            left: 15px;
+            left: 18px;
             top: 10px;
             bottom: 10px;
             width: 2px;
-            background: #d0d0d0;
+            background: #cbd5e0;
         }
 
         .timeline-item {
@@ -229,52 +303,148 @@
 
         .timeline-dot {
             position: absolute;
-            left: -32px;
-            top: 5px;
-            width: 12px;
-            height: 12px;
+            left: -35px;
+            top: 8px;
+            width: 14px;
+            height: 14px;
             border-radius: 50%;
-            background: #666;
+            background: #4a5568;
             border: 3px solid white;
-            box-shadow: 0 0 0 2px #666;
+            box-shadow: 0 0 0 2px #4a5568;
+            z-index: 1;
         }
 
-        .job-title {
+        .item-title {
             font-weight: 600;
-            font-size: 16px;
-            margin-bottom: 5px;
+            font-size: 17px;
+            margin-bottom: 6px;
+            color: #2d3748;
         }
 
-        .company {
+        .item-subtitle {
+            color: #4a5568;
+            font-size: 14px;
+            margin-bottom: 6px;
+            line-height: 1.6;
             font-style: italic;
-            color: #555;
-            font-size: 13px;
-            margin-bottom: 5px;
         }
 
         .date {
-            color: #888;
-            font-size: 12px;
-            margin-bottom: 10px;
-        }
-
-        .course-list {
-            list-style: none;
+            color: #718096;
             font-size: 13px;
-            color: #555;
+            margin-bottom: 12px;
+            font-weight: 500;
         }
 
-        .course-list li {
-            margin-bottom: 5px;
+        .description {
+            color: #4a5568;
+            font-size: 14px;
+            line-height: 1.7;
+            margin-top: 10px;
         }
 
-        .course-list a {
+        .description a {
             color: #0066cc;
             text-decoration: none;
         }
 
-        .course-list a:hover {
+        .description a:hover {
             text-decoration: underline;
+        }
+
+        .item-list {
+            list-style: none;
+            font-size: 14px;
+            color: #4a5568;
+            margin-top: 10px;
+        }
+
+        .item-list li {
+            margin-bottom: 6px;
+            padding-left: 0;
+        }
+
+        .item-list a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .item-list a:hover {
+            text-decoration: underline;
+        }
+
+        .skills-grid {
+            display: grid;
+            gap: 28px;
+        }
+
+        .skill-category {
+            margin-bottom: 18px;
+        }
+
+        .skill-title {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+
+        .skill-content {
+            color: #4a5568;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .education-item {
+            margin-bottom: 35px;
+        }
+
+        .degree {
+            font-weight: 600;
+            font-size: 17px;
+            color: #2d3748;
+            margin-bottom: 6px;
+        }
+
+        .institution {
+            color: #4a5568;
+            font-size: 14px;
+            margin-bottom: 6px;
+            font-style: italic;
+        }
+
+        .gpa {
+            color: #4a5568;
+            font-size: 14px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+
+        .achievements {
+            margin-top: 12px;
+            margin-bottom: 15px;
+        }
+
+        .achievements li {
+            color: #4a5568;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px 20px;
+            margin-top: 15px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+
+        .course-item {
+            font-size: 13px;
+            color: #4a5568;
         }
 
         @media (max-width: 768px) {
@@ -282,14 +452,41 @@
                 flex-direction: column;
                 align-items: center;
                 text-align: center;
+                padding: 40px 30px;
+            }
+
+            .profile-left {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .research-interests {
+                flex: 1;
             }
 
             nav {
-                gap: 15px;
+                gap: 5px;
+                padding: 15px;
+                justify-content: center;
             }
 
-            .content-section, .resume-section {
-                padding: 20px;
+            .content-section {
+                padding: 40px 30px;
+            }
+
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .venn-diagram {
+                width: 220px;
+                height: 220px;
+            }
+
+            .circle {
+                width: 130px;
+                height: 130px;
             }
         }
     </style>
@@ -298,57 +495,61 @@
     <div class="container">
         <nav>
             <a href="#resume">Resume</a>
-            <a href="#projects">Projects</a>
-            <a href="#achievements">Achievements</a>
-            <a href="#leadership">Leadership</a>
-            <a href="#contact">Contact</a>
+            <a href="projects.html">Projects</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="leadership.html">Leadership</a>
+            <a href="contact.html">Contact</a>
         </nav>
 
         <div class="header-section">
             <div class="profile-left">
-                <img src="profile.jpg" alt="Tanjeem Azwad Zaman" class="profile-img">
-                <h1>Tanjeem Azwad Zaman <span style="color: #888;">♂</span></h1>
-                <p class="subtitle">Ph.D. Student<br>Carnegie Mellon University, SCS</p>
-                <div class="email-box">
+               <img src="WhatsApp Image 2025-11-28 at 09.51.21_1f6eb317.jpg" alt="" class="profile-img">
+                <h1>Saidul Islam <span class="gender-symbol">♂</span></h1>
+                <p class="subtitle">Ph.D. Student</p>
+                <p class="university">Carnegie Mellon University, SCS</p>
+                <div class="email-section">
                     <div class="email-icon"></div>
-                    <span>EMAIL<br>zaman.tanjeemazwad@gmail.com</span>
+                    <div class="email-content">
+                        <div class="email-label">EMAIL</div>
+                        <a href="mailto:saidul.tanjeemzaman@gmail.com" class="email-link">saidul.tanjeemzaman@gmail.com</a>
+                    </div>
                 </div>
             </div>
 
             <div class="research-interests">
                 <div class="venn-diagram">
-                    <div class="circle circle1">Bioinformatics</div>
-                    <div class="circle circle2">Algorithms</div>
+                    <div class="circle circle1">Algorithms</div>
+                    <div class="circle circle2">Bioinformatics</div>
                     <div class="circle circle3">Machine Learning</div>
                 </div>
                 <p class="research-title">My Research Interests</p>
             </div>
         </div>
 
-        <div class="content-section">
+        <div class="content-section" id="about">
             <h2>About Me</h2>
             <p class="about-text">
-                I'm saidul, a Ph.D. student (Fall'25) in the Joint CMU-Pitt Ph.D Program in Computational Biology, under Carnegie Mellon University's School of Computer Science. I completed my undergraduate from the <a href="#">Department of Computer Science & Engineering at Bangladesh University of Engineering and Technology (BUET)</a>. My research interests lie in Bioinformatics, Algorithms and Machine Learning.
+                I'm Saidul Islam, a Ph.D. student (Fall'25) in the Joint CMU-Pitt PhD Program in Computational Biology, under Carnegie Mellon University's School of Computer Science. I completed my undergraduate from the <a href="#">Department of Computer Science & Engineering (CSE)</a> at <a href="#">Bangladesh University of Engineering and Technology (BUET)</a>. My research interests lie in Bioinformatics, Algorithms and Machine Learning.
             </p>
             <p class="about-text">
-                Outside of my academic pursuits, I am an avid fan of my favorite soccer club — which would explain my fascination with Olympiakos during middle and high school. In my free time, I enjoy playing soccer, watching anime, or covering OSTs on the violin.
+                Outside of my academic pursuits, I am an avid fan of problem-solving — which would explain my fascination with Olympiads during middle and high school. In my free time, I enjoy playing soccer, watching anime, or covering OSTs on the violin.
             </p>
         </div>
 
-        <div class="resume-section" id="resume">
-            <div class="resume-header">
+        <div class="content-section" id="resume">
+            <div class="section-header">
                 <h2>My Resume</h2>
-                <div class="download-btn">↓</div>
+                <a href="#" class="download-btn" title="Download Resume">📥</a>
             </div>
 
-            <h3 style="margin-bottom: 20px; font-size: 18px;">Work Experience</h3>
+            <h3>Work Experience</h3>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="job-title">Lecturer</div>
-                    <div class="company">Department of Computer Science and Engineering,<br>BRAC University</div>
+                    <div class="item-title">Lecturer</div>
+                    <div class="item-subtitle">Department of Computer Science and Engineering,<br>BRAC University</div>
                     <div class="date">January 2025 — July 2025</div>
-                    <ul class="course-list">
+                    <ul class="item-list">
                         <li>[CSE331] Automata and Computability (Theory)</li>
                         <li>[CSE423] Computer Graphics (Theory + Lab)</li>
                     </ul>
@@ -356,21 +557,161 @@
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="job-title">Adjunct Lecturer</div>
-                    <div class="company">Department of Computer Science and Engineering,<br>Bangladesh University of Engineering and Technology</div>
+                    <div class="item-title">Adjunct Lecturer</div>
+                    <div class="item-subtitle">Department of Computer Science and Engineering,<br>Bangladesh University of Engineering and Technology</div>
                     <div class="date">August 2024 — December 2024</div>
-                    <ul class="course-list">
+                    <ul class="item-list">
                         <li>[CSE211] <a href="#">Theory of Computation (Theory)</a></li>
-                        <li>[CSE328] Information Systems Design and Management (Lab)</li>
-                        <li>[CSE410] Computer Graphics (Lab)</li>
-                        <li>[CSE216] Computer Networks (Lab)</li>
-                        <li>[CSE260] Technical Writing and Presentation (Lab)</li>
+                        <li>[CSE328] Information Systems Development and Management (Lab)</li>
+                        <li>[CSE322] Computer Networks (Lab)</li>
+                        <li>[CSE210] Computer Architecture (Lab)</li>
+                        <li>[CSE200] Technical Writing and Presentation (Lab)</li>
                     </ul>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="job-title">Machine Learning Intern</div>
+                    <div class="item-title">Machine Learning Intern</div>
+                    <div class="item-subtitle">North-West Power Generation Company Limited, Bangladesh</div>
+                    <div class="date">April 2023 — June 2023</div>
+                    <p class="description">
+                        Part of an internship program organized by the Department of CSE, BUET. Collected data from several sensors installed around the NWPGCL plant and used ML models to predict the operational state of machinery.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="item-title">Software Development Intern</div>
+                    <div class="item-subtitle">Infolytx</div>
+                    <div class="date">May 2023 — June 2023</div>
+                    <p class="description">
+                        I was part of a team in charge of developing an app with real-time data analysis and visualization for a foreign client. Built a full-stack module from scratch: Data-Analysis (pandas), Backend (FastAPI), and Frontend development (JavaScript).
+                    </p>
+                </div>
+            </div>
+
+            <h3>Publications And Research Experience</h3>
+            <h3>Publications And Research Experience</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="item-title">Research Project Title</div>
+                    <div class="item-subtitle">Computational Biology, Phylogenetics</div>
+                    <div class="date">August 2023 — March 2025</div>
+                    <p class="description">
+                        Published at <a href="#">Conference Name</a><br>
+                        Supervised by <a href="#">Dr. Supervisor Name</a>
+                    </p>
+                    <p class="description">
+                        Description of your research work, methodology, and outcomes. Highlight the impact and contributions of your work. Include key findings and publications.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="item-title">Another Research Project</div>
+                    <div class="item-subtitle">Machine Learning, Algorithms</div>
+                    <div class="date">October 2023 — Present</div>
+                    <p class="description">
+                        Brief description of the project, technologies used, and results achieved. Include any publications or presentations.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section" id="education">
+            <h2>Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="education-item">
+                        <div class="degree">Ph.D. in Computational Biology</div>
+                        <div class="institution">School of Computer Science, Carnegie Mellon University</div>
+                        <div class="date">August 2025 — Present</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="education-item">
+                        <div class="degree">B.Sc. in Computer Science and Engineering</div>
+                        <div class="institution">Bangladesh University of Engineering and Technology</div>
+                        <div class="date">April 2019 — July 2024</div>
+                        <p class="gpa">CGPA: 4.00/4.00</p>
+                        <ul class="achievements">
+                            <li>Ranked 1st in a class of 113 students</li>
+                        </ul>
+                        
+                        <div style="margin-top: 15px;">
+                            <strong style="font-size: 15px; color: #2d3748;">Notable Courses:</strong>
+                            <div class="course-grid">
+                                <div class="course-item">CSE471- Machine Learning</div>
+                                <div class="course-item">CSE411- Algorithm Engineering</div>
+                                <div class="course-item">CSE463- Introduction to Bioinformatics</div>
+                                <div class="course-item">CSE309- Compiler Design</div>
+                                <div class="course-item">CSE305- Computer Architecture</div>
+                                <div class="course-item">CSE313- Operating Systems</div>
+                                <div class="course-item">CSE405- Computer Security</div>
+                                <div class="course-item">CSE321- Computer Networks</div>
+                                <div class="course-item">CSE409- Computer Graphics</div>
+                                <div class="course-item">CSE203- Data Structures and Algorithms</div>
+                                <div class="course-item">MATH245- Statistics and Probability</div>
+                                <div class="course-item">MATH247- Linear Algebra</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="education-item">
+                        <div class="degree">Higher Secondary School Certificate (HSC)</div>
+                        <div class="institution">Notre Dame College, Dhaka</div>
+                        <div class="date">2018</div>
+                        <p class="gpa">GPA: 5.00/5.00</p>
+                        <ul class="achievements">
+                            <li>Board Talent Pool Scholarship</li>
+                            <li>Placed 8th in Dhaka Board</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="education-item">
+                        <div class="degree">Secondary School Certificate (SSC)</div>
+                        <div class="institution">St. Joseph Higher Secondary School</div>
+                        <div class="date">2016</div>
+                        <p class="gpa">GPA: 5.00/5.00</p>
+                        <ul class="achievements">
+                            <li>Board Talent Pool Scholarship</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section" id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-title">Programming Languages</div>
+                    <div class="skill-content">Python, C/C++, C#, Java, JavaScript, SQL, HTML/CSS, Bash, LaTeX, MySQL, x86 Assembly, Bison/Flex</div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-title">Libraries/Frameworks</div>
+                    <div class="skill-content">PyTorch, Scikit-learn, Node.js, NS2, xv6, FastAPI, ReactJS, Wireshark</div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-title">Tools/Platforms</div>
+                    <div class="skill-content">Docker, Git, Google Colab, Kaggle, Visual Studio Code, Linux</div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-title">Languages</div>
+                    <div class="skill-content">English (Fluent), Bengali (Native)</div>
                 </div>
             </div>
         </div>

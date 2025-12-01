@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Saidul Islam</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            background: white;
+            padding: 20px 30px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: flex-end;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #555;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s;
+            font-weight: 500;
+            padding: 8px 20px;
+            border-radius: 20px;
+            background: #f5f5f5;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background: #e0e0e0;
+            color: #333;
+        }
+
+        .page-header {
+            padding: 40px 60px 30px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 10px;
+            padding-bottom: 15px;
+            border-bottom: 4px solid #2d3748;
+            display: inline-block;
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 20px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .filter-tab {
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 8px 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .filter-tab:hover,
+        .filter-tab.active {
+            color: #2d3748;
+            border-bottom-color: #2d3748;
+        }
+
+        .projects-grid {
+            padding: 30px 60px 60px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 40px;
+        }
+
+        .project-card {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .project-card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            transform: translateY(-4px);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 220px;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .project-tech {
+            font-size: 13px;
+            color: #0066cc;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
+
+        .project-description {
+            font-size: 14px;
+            color: #4a5568;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px) {
+            .page-header,
+            .projects-grid {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            nav {
+                padding: 15px;
+                justify-content: center;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="index.html">Resume</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="leadership.html">Leadership</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="page-header">
+            <h1>Projects</h1>
+            <div class="filter-tabs">
+                <span class="filter-tab active">All</span>
+                <span class="filter-tab">Machine Learning</span>
+                <span class="filter-tab">Software Development</span>
+                <span class="filter-tab">Systems</span>
+            </div>
+        </div>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/ml-neural-network.jpg" alt="Machine Learning Project">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Machine Learning Algorithms And Neural Network From Scratch</h3>
+                    <p class="project-tech">Python, Numpy, Scikit-learn, Pandas, Seaborn</p>
+                    <p class="project-description">
+                        Implemented matrix transformations and image reconstruction using singular value decomposition for compression, exploratory data analysis, and preprocessing techniques. Built and evaluated a feed-forward neural network from scratch using only numpy. Implemented PCA and clustering with expectation-maximization algorithm on Gaussian Mixture Models.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/xv6-memory.jpg" alt="Xv6 Memory Management">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Xv6 Memory Management</h3>
+                    <p class="project-tech">Xv6 Operating System</p>
+                    <p class="project-description">
+                        Developed the paging framework of xv6 operating system, as well as implementing many other functionalities of the operating system.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/compiler.jpg" alt="C Compiler">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">C Compiler</h3>
+                    <p class="project-tech">Flex, Bison, C++</p>
+                    <p class="project-description">
+                        Built a complete compiler for a subset of C language including lexical analysis, syntax analysis, semantic analysis, intermediate code generation, and assembly code generation for 8086 architecture.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/ray-tracing.jpg" alt="Ray Tracing">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Ray Tracing Engine</h3>
+                    <p class="project-tech">C++, OpenGL</p>
+                    <p class="project-description">
+                        Implemented a ray tracing engine from scratch with support for multiple light sources, reflections, refractions, and shadows. Created realistic 3D scenes with various geometric primitives.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/database.jpg" alt="Database Project">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Database Management System</h3>
+                    <p class="project-tech">Oracle, PL/SQL, Java</p>
+                    <p class="project-description">
+                        Designed and implemented a comprehensive database system for a university management application with complex queries, triggers, and stored procedures.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="assets/network.jpg" alt="Network Simulator">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Network Protocol Simulation</h3>
+                    <p class="project-tech">NS2, C++, TCL</p>
+                    <p class="project-description">
+                        Simulated various network protocols including TCP variants, routing algorithms, and congestion control mechanisms. Analyzed performance metrics and network behavior under different conditions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

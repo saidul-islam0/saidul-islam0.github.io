@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leadership - Saidul Islam</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            background: white;
+            padding: 20px 30px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: flex-end;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #555;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s;
+            font-weight: 500;
+            padding: 8px 20px;
+            border-radius: 20px;
+            background: #f5f5f5;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background: #e0e0e0;
+            color: #333;
+        }
+
+        .page-header {
+            padding: 40px 60px 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 10px;
+            padding-bottom: 15px;
+            border-bottom: 4px solid #2d3748;
+            display: inline-block;
+        }
+
+        .content {
+            padding: 30px 60px 60px;
+        }
+
+        .leadership-timeline {
+            position: relative;
+            padding-left: 45px;
+        }
+
+        .leadership-timeline::before {
+            content: '';
+            position: absolute;
+            left: 18px;
+            top: 10px;
+            bottom: 10px;
+            width: 2px;
+            background: #cbd5e0;
+        }
+
+        .leadership-item {
+            position: relative;
+            margin-bottom: 45px;
+        }
+
+        .leadership-dot {
+            position: absolute;
+            left: -35px;
+            top: 8px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #4a5568;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px #4a5568;
+            z-index: 1;
+        }
+
+        .leadership-title {
+            font-size: 17px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 6px;
+        }
+
+        .leadership-organization {
+            font-size: 14px;
+            color: #0066cc;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .leadership-date {
+            font-size: 13px;
+            color: #718096;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .leadership-description {
+            font-size: 14px;
+            color: #4a5568;
+            line-height: 1.8;
+        }
+
+        .leadership-description a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .leadership-description a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .page-header,
+            .content {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            nav {
+                padding: 15px;
+                justify-content: center;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .leadership-timeline {
+                padding-left: 35px;
+            }
+
+            .leadership-dot {
+                left: -28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="index.html">Resume</a>
+            <a href="projects.html">Projects</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="leadership.html" class="active">Leadership</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="page-header">
+            <h1>Leadership Experience</h1>
+        </div>
+
+        <div class="content">
+            <div class="leadership-timeline">
+                <div class="leadership-item">
+                    <div class="leadership-dot"></div>
+                    <h3 class="leadership-title">Content Team Head - Brainlytic: An Interactive Problem Solving App</h3>
+                    <p class="leadership-date">2020 - 2024</p>
+                    <p class="leadership-description">
+                        Supervised by <a href="#">Dr. Anindya Iqbal</a>, I was the volunteer Head of the Content Team of our interactive problem-solving website, <a href="#">Brainlytic</a>. This was designed to help students of grades 3 to 10 explore the fun of problem-solving from the very first of their kind to support Bengali For Kids as well. I was in charge of curating the problems and assigning responsibilities to the other Content Creators. Thus our site amassed over 700 problems in Math, Geometry and Logical Reasoning. The website is currently going through a massive overhaul.
+                    </p>
+                </div>
+
+                <div class="leadership-item">
+                    <div class="leadership-dot"></div>
+                    <h3 class="leadership-title">Technical Committee Chair - IEEE CS Student Branch Chapter BUET</h3>
+                    <p class="leadership-date">2022 - 2024</p>
+                    <p class="leadership-description">
+                        Previously serving as the Treasurer (2021-2022) and Technical Committee Member (2020-2021), I worked to ensure the accessibility of CS education to my community. Arranging webinars and seminars (eg our topics like "How to <a href="#">Write a Research Paper</a>" by <a href="#">Dr. M. Sohel Rahman</a>), as well as national competitions like the Inter-University Gamejam 2023, were some of the responsibilities I fulfilled.
+                    </p>
+                </div>
+
+                <div class="leadership-item">
+                    <div class="leadership-dot"></div>
+                    <h3 class="leadership-title">Class Representative - Department Of CSE, BUET</h3>
+                    <p class="leadership-date">2019 - 2024</p>
+                    <p class="leadership-description">
+                        Represented the class in departmental meetings, organized class events, and communicated with the faculty on behalf of the class.
+                    </p>
+                </div>
+
+                <div class="leadership-item">
+                    <div class="leadership-dot"></div>
+                    <h3 class="leadership-title">Centerback And Vice Captain - Hall And Faculty Football (Soccer) Teams At BUET</h3>
+                    <p class="leadership-date">2022 - 2023</p>
+                    <p class="leadership-description">
+                        Since my freshman year, I have been a starter for both my Hall and Faculty football teams. I played every game full-time and contributed to my Hall's historic back-to-back championships in the Inter-Hall Football tournament. I was also a part of BUET's successful run to the semifinals of the Inter-University Football tournament. My defensive prowess and leadership earned me the role of Vice Captain.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

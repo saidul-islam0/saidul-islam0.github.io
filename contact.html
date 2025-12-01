@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Saidul Islam</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            background: white;
+            padding: 20px 30px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: flex-end;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #555;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s;
+            font-weight: 500;
+            padding: 8px 20px;
+            border-radius: 20px;
+            background: #f5f5f5;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background: #e0e0e0;
+            color: #333;
+        }
+
+        .page-header {
+            padding: 40px 60px 30px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 10px;
+            padding-bottom: 15px;
+            border-bottom: 4px solid #2d3748;
+            display: inline-block;
+        }
+
+        .content {
+            padding: 20px 60px 60px;
+        }
+
+        .info-section {
+            background: #f8f9fa;
+            border-radius: 12px;
+            padding: 35px;
+            border: 1px solid #e9ecef;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .contact-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: #0066cc;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 20px;
+            color: white;
+        }
+
+        .contact-details {
+            flex: 1;
+        }
+
+        .contact-label {
+            font-size: 11px;
+            color: #718096;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .contact-value {
+            font-size: 15px;
+            color: #2d3748;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .contact-value a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-value a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 35px;
+            padding-top: 30px;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #2d3748;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .social-link:hover {
+            border-color: #0066cc;
+            color: #0066cc;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .social-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .page-header,
+            .content {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            nav {
+                padding: 15px;
+                justify-content: center;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .info-section {
+                padding: 25px 20px;
+            }
+
+            .social-links {
+                flex-direction: column;
+            }
+
+            .social-link {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="index.html">Resume</a>
+            <a href="projects.html">Projects</a>
+            <a href="achievements.html">Achievements</a>
+            <a href="leadership.html">Leadership</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+
+        <div class="page-header">
+            <h1>Contact</h1>
+        </div>
+
+        <div class="content">
+            <div class="info-section">
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div class="contact-details">
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value">
+                            <a href="mailto:saidul.islam@example.com">saidul.islam@example.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <div class="contact-details">
+                        <div class="contact-label">Phone</div>
+                        <div class="contact-value">+880 1234-567890</div>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-details">
+                        <div class="contact-label">Address</div>
+                        <div class="contact-value">
+                            Department of Computer Science and Engineering<br>
+                            Bangladesh University of Engineering and Technology<br>
+                            Dhaka, Bangladesh
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/saidul-islam0" target="_blank" class="social-link">
+                        <span class="social-icon">🐙</span>
+                        GitHub
+                    </a>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="social-link">
+                        <span class="social-icon">💼</span>
+                        LinkedIn
+                    </a>
+                    <a href="https://scholar.google.com/yourprofile" target="_blank" class="social-link">
+                        <span class="social-icon">🎓</span>
+                        Google Scholar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

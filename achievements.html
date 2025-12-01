@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achievements - Saidul Islam</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            background: white;
+            padding: 20px 30px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: flex-end;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #555;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s;
+            font-weight: 500;
+            padding: 8px 20px;
+            border-radius: 20px;
+            background: #f5f5f5;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background: #e0e0e0;
+            color: #333;
+        }
+
+        .page-header {
+            padding: 40px 60px 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 10px;
+            padding-bottom: 15px;
+            border-bottom: 4px solid #2d3748;
+            display: inline-block;
+        }
+
+        .section {
+            padding: 30px 60px 40px;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 30px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #2d3748;
+            display: inline-block;
+        }
+
+        .competitions-list {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+        }
+
+        .competition-item {
+            display: flex;
+            gap: 20px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            border-left: 4px solid #0066cc;
+            transition: all 0.3s;
+        }
+
+        .competition-item:hover {
+            background: #f1f3f5;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .trophy-icon {
+            width: 40px;
+            height: 40px;
+            background: #0066cc;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 20px;
+            color: white;
+        }
+
+        .competition-content {
+            flex: 1;
+        }
+
+        .competition-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+
+        .competition-badge {
+            display: inline-block;
+            padding: 3px 12px;
+            background: #10b981;
+            color: white;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .competition-badge.runner-up {
+            background: #3b82f6;
+        }
+
+        .competition-meta {
+            font-size: 13px;
+            color: #6b7280;
+            margin-bottom: 6px;
+            font-style: italic;
+        }
+
+        .competition-meta strong {
+            color: #4b5563;
+            font-style: normal;
+        }
+
+        .competition-description {
+            font-size: 14px;
+            color: #4a5568;
+            line-height: 1.7;
+            margin-bottom: 10px;
+        }
+
+        .event-link {
+            display: inline-block;
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .event-link:hover {
+            text-decoration: underline;
+        }
+
+        .honors-timeline {
+            position: relative;
+            padding-left: 45px;
+        }
+
+        .honors-timeline::before {
+            content: '';
+            position: absolute;
+            left: 18px;
+            top: 10px;
+            bottom: 10px;
+            width: 2px;
+            background: #cbd5e0;
+        }
+
+        .honor-item {
+            position: relative;
+            margin-bottom: 35px;
+        }
+
+        .honor-dot {
+            position: absolute;
+            left: -35px;
+            top: 8px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: #4a5568;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px #4a5568;
+            z-index: 1;
+        }
+
+        .honor-title {
+            font-size: 17px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 8px;
+        }
+
+        .honor-year {
+            font-size: 13px;
+            color: #718096;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .honor-description {
+            font-size: 14px;
+            color: #4a5568;
+            line-height: 1.7;
+            margin-bottom: 8px;
+        }
+
+        .honor-link {
+            display: inline-block;
+            color: #0066cc;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .honor-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .page-header,
+            .section {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            nav {
+                padding: 15px;
+                justify-content: center;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .competition-item {
+                flex-direction: column;
+            }
+
+            .honors-timeline {
+                padding-left: 35px;
+            }
+
+            .honor-dot {
+                left: -28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <a href="index.html">Resume</a>
+            <a href="projects.html">Projects</a>
+            <a href="achievements.html" class="active">Achievements</a>
+            <a href="leadership.html">Leadership</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="page-header">
+            <h1>Achievements</h1>
+        </div>
+
+        <div class="section">
+            <h2>Competitions</h2>
+            <div class="competitions-list">
+                <div class="competition-item">
+                    <div class="trophy-icon">🏆</div>
+                    <div class="competition-content">
+                        <h3 class="competition-title">Robi Datathon 3.0</h3>
+                        <span class="competition-badge runner-up">Runner-Up</span>
+                        <p class="competition-meta"><strong>Date:</strong> May, 2024</p>
+                        <p class="competition-meta"><strong>Organizer:</strong> Robi Axiata Limited</p>
+                        <p class="competition-description">
+                            National Data analysis competition with over 3500 participants and 1000 teams from industry and academia. Secured Runner-up position by solving several data analytics challenges and building a predictive model for business use cases.
+                        </p>
+                        <a href="#" class="event-link">[Event Link]</a>
+                    </div>
+                </div>
+
+                <div class="competition-item">
+                    <div class="trophy-icon">🏆</div>
+                    <div class="competition-content">
+                        <h3 class="competition-title">IEEE SPS Video And Image Processing Cup 2023</h3>
+                        <span class="competition-badge">Champion</span>
+                        <p class="competition-meta"><strong>Date:</strong> December, 2023</p>
+                        <p class="competition-meta"><strong>Event:</strong> Video and Image Processing Cup</p>
+                        <p class="competition-description">
+                            Awarded Champion for our solution to the challenge of Ophthalmic Biomarker Detection from OCT scans.
+                        </p>
+                        <a href="#" class="event-link">[Event Link]</a>
+                    </div>
+                </div>
+
+                <div class="competition-item">
+                    <div class="trophy-icon">🏆</div>
+                    <div class="competition-content">
+                        <h3 class="competition-title">NSysS (2023) Student Research Poster Presentation</h3>
+                        <span class="competition-badge">Champion</span>
+                        <p class="competition-meta"><strong>Date:</strong> December, 2023</p>
+                        <p class="competition-meta"><strong>Venue:</strong> 10th NSysS 2023 Conference</p>
+                        <p class="competition-description">
+                            Won first place in the student research poster presentation competition at the National Systems Conference 2023.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="competition-item">
+                    <div class="trophy-icon">🏆</div>
+                    <div class="competition-content">
+                        <h3 class="competition-title">BUET CSE Fest Programming Contest</h3>
+                        <span class="competition-badge">Champion</span>
+                        <p class="competition-meta"><strong>Date:</strong> March, 2023</p>
+                        <p class="competition-description">
+                            Secured first position in the inter-departmental programming contest organized by the Department of CSE, BUET.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Honors & Awards</h2>
+            <div class="honors-timeline">
+                <div class="honor-item">
+                    <div class="honor-dot"></div>
+                    <h3 class="honor-title">University Gold Medal</h3>
+                    <p class="honor-year">2024</p>
+                    <p class="honor-description">
+                        Awarded by BUET to the highest CGPA holder in an entire graduating batch.
+                    </p>
+                </div>
+
+                <div class="honor-item">
+                    <div class="honor-dot"></div>
+                    <h3 class="honor-title">Prime Minister Gold Medal</h3>
+                    <p class="honor-year">2024</p>
+                    <p class="honor-description">
+                        Awarded by BUET to the highest CGPA holder in each faculty of an entire graduating batch.
+                    </p>
+                </div>
+
+                <div class="honor-item">
+                    <div class="honor-dot"></div>
+                    <h3 class="honor-title">IEEE Upsilon Pi Epsilon Award 2023</h3>
+                    <p class="honor-year">2023</p>
+                    <p class="honor-description">
+                        Recognized for academic excellence in the computing and information disciplines. Awarded by the IEEE Computer Society in collaboration with Upsilon Pi Epsilon.
+                    </p>
+                    <a href="#" class="honor-link">[Link]</a>
+                </div>
+
+                <div class="honor-item">
+                    <div class="honor-dot"></div>
+                    <h3 class="honor-title">University Merit List Scholarship</h3>
+                    <p class="honor-year">2020 to 2023</p>
+                    <p class="honor-description">
+                        This scholarship is granted to the top 10% of undergraduate students for academic excellence at BUET. I was an awardee for each semester of my time at BUET.
+                    </p>
+                </div>
+
+                <div class="honor-item">
+                    <div class="honor-dot"></div>
+                    <h3 class="honor-title">Dean's List Scholarship</h3>
+                    <p class="honor-year">2020 to 2023</p>
+                    <p class="honor-description">
+                        This scholarship is granted to undergraduate students for academic excellence at BUET. I was an awardee for each year of my time at BUET.
+                    </p>
+                </div>
+
+                <div class="honor-item">
+                    <div class="honor-dot"></div>
+                    <h3 class="honor-title">Dhaka Board Talent Pool Scholarship (HSC)</h3>
+                    <p class="honor-year">2018</p>
+                    <p class="honor-description">
+                        Ranked 8nd in the Board.
+                    </p>
+                </div>
+
+                <div class="honor-item">
+                    <div class="honor-dot"></div>
+                    <h3 class="honor-title">Dhaka Board Talent Pool Scholarship (SSC)</h3>
+                    <p class="honor-year">2016</p>
+                    <p class="honor-description">
+                        Awarded for outstanding performance in the Secondary School Certificate examination.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
